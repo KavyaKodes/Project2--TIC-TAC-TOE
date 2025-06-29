@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #e0e0e0, #a0d8ef);
+    color: white;
+
+}
+
+.container {
+    text-align: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(35, 203, 184, 0.2) ;
+    color: #333;
+    border: 20px solid rgb(19, 90, 85);
+
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-decoration: underline;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+    padding: inherit;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #2bd2bb;
+    border: 2px solid #0a4f46;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    color: #333;
+    border-radius: 30px;
+}
+
+.cell.winning {
+    background-color: #b33f9a;
+    color: white;
+    animation: glow is infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px white;
+    }
+    to {
+        box-shadow: 0 0 20px white;
+    }
+}
+
+#status {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#resetButton {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+#resetButton:hover {
+    background-color: #004d40;
+
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
